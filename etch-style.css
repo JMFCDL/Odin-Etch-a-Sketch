@@ -1,4 +1,4 @@
-#container {
+#container-grid {
     display: flex;
     flex-wrap: wrap;
 }
@@ -12,5 +12,4 @@
 .boxes {
     display: flex;
     flex: 1;
-    background-color: aqua;
 }
