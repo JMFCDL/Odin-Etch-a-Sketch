@@ -1,4 +1,17 @@
+#etch-body {
+    display: flex;
+}
+
+#container-settings {
+    width: 50vw;
+}
+
+#title {
+    text-align: center;
+}
+
 #container-grid {
+    width: 50vw;
     display: flex;
     flex-wrap: wrap;
 }
