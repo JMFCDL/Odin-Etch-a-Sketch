@@ -2,7 +2,7 @@ let total_num_grids = 4;
 let count = 0;
 let temp = 0;
 let length = 0;
-let changeColor = "red";
+let changeColor = "None";
 let boxHeight = 50;
 let storageVariable = (parseInt(localStorage.getItem("storageVariable")));
 const gridHeight = 70;
@@ -102,7 +102,7 @@ containerSet.appendChild(title);
 
 let currentColor = document.createElement("div");
 currentColor.setAttribute("id", "current");
-currentColor.textContent = "Current Color: " + storageVariable*storageVariable;
+currentColor.textContent = "Current Color: " + changeColor;
 containerSet.appendChild(currentColor);
 
 let decreaseGridBoxes = document.createElement("button");
@@ -150,6 +150,11 @@ greenButton.setAttribute("id", "greenB");
 greenButton.textContent = ("Green");
 containerSet.appendChild(greenButton);
 
+let resetGrid = document.createElement("button");
+resetGrid.setAttribute("id", "reset");
+resetGrid.textContent = "Blank Canvas";
+containerSet.appendChild(resetGrid);
+
 
 containerSet.addEventListener("click", event => {
     switch(event.target.id) {
@@ -185,6 +190,9 @@ containerSet.addEventListener("click", event => {
             break;
         case "greenB":
             changeColor = "green";
+            break;
+        case "reset":
+            window.location.reload();
             break;
     }
     if(check === true) {
